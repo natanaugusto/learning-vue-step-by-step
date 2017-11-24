@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Learning Vue.js step by step</title>
+</head>
+<body>
+	<h1> {{ fullName }}</h1>
+	<input type="text" v-model="first" placeholder="First Name">
+	<input type="text" v-model="last" placeholder="Last Name">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		new Vue({
+			el: 'body',
+			data: {
+				first: 'Natan',
+				last: 'Augusto'
+			},
+			computed: {
+				fullName: function () {
+					return this.first + ' ' + this.last;
+				}
+			}
+		});
+	</script>
+</body>
+</html>
